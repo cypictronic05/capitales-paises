@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reto de Capitales del Mundo</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app-shell">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">Juego educativo</p>
+        <h1>Reto de Capitales del Mundo</h1>
+        <p class="description">Mira la bandera, lee el país y elige su capital correcta.</p>
+      </div>
+      <button class="restart-button" id="restartButton" type="button" aria-label="Reiniciar juego">
+        Reiniciar
+      </button>
+    </section>
+
+    <section class="stats-panel" aria-label="Estadísticas del juego">
+      <div class="stat">
+        <span>Puntaje</span>
+        <strong id="score">0</strong>
+      </div>
+      <div class="stat">
+        <span>Pregunta</span>
+        <strong><span id="questionNumber">1</span>/<span id="totalQuestions">30</span></strong>
+      </div>
+      <div class="stat">
+        <span>Racha</span>
+        <strong id="streak">0</strong>
+      </div>
+    </section>
+
+    <div class="progress-track" aria-hidden="true">
+      <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+    <section class="game-card" id="gameCard" aria-live="polite">
+      <div class="flag-badge" id="flag">🌎</div>
+      <p class="country-label">País</p>
+      <h2 id="countryName">Preparando reto...</h2>
+      <p class="question-text">¿Cuál es su capital?</p>
+
+      <div class="options-grid" id="optionsGrid"></div>
+
+      <div class="feedback" id="feedback" role="status"></div>
+      <button class="next-button hidden" id="nextButton" type="button">Siguiente</button>
+    </section>
+
+    <section class="result-card hidden" id="resultCard" aria-live="polite">
+      <p class="eyebrow">Resultado final</p>
+      <h2 id="resultTitle">Excelente</h2>
+      <div class="result-score" id="finalScore">0 puntos</div>
+      <div class="result-grid">
+        <div>
+          <span>Aciertos</span>
+          <strong id="correctAnswers">0</strong>
+        </div>
+        <div>
+          <span>Errores</span>
+          <strong id="wrongAnswers">0</strong>
+        </div>
+      </div>
+      <button class="play-again-button" id="playAgainButton" type="button">Jugar otra vez</button>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
