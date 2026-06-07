@@ -1046,6 +1046,12 @@ function createLayout() {
           <button id="restartButton" class="restart-button">Reiniciar</button>
         </div>
       </section>
+      <footer class="site-credit">
+        Realizada por 
+        <a href="https://www.instagram.com/cypictronic" target="_blank" rel="noopener noreferrer">
+          Cypictronic
+        </a>
+      </footer>      
     </main>
   `;
 
